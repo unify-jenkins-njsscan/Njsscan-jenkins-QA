@@ -5,7 +5,7 @@ pipeline {
     PYTHON_DIR = "${env.WORKSPACE}/python"  // Use the same Python path as first pipeline
     PYTHON_URL = "https://github.com/indygreg/python-build-standalone/releases/download/20240107/cpython-3.11.7+20240107-x86_64-unknown-linux-gnu-install_only.tar.gz"
     VENV_DIR = "${env.WORKSPACE}/venv"
-    SCAN_DIR = "${env.WORKSPACE}/test-nodejs-code"
+    SCAN_DIR = "${env.WORKSPACE}/tests"
   }
 
   stages {
