@@ -7,9 +7,6 @@ pipeline {
     VENV_DIR = "${env.WORKSPACE}/venv"
     SCAN_DIR = "${env.WORKSPACE}/tests"
   }
-  triggers {
-        cron '10 15 * * 1-5' // Runs at 15:10 on every day-of-week from Monday through Friday
-  }
   stages {
     stage('Ensure Python 3.11') {
       steps {
@@ -87,7 +84,9 @@ pipeline {
       }
     }
   }
-
+  triggers {
+        cron '10 15 * * 1-5' // Runs at 15:10 on every day-of-week from Monday through Friday
+  }
   post {
     always {
       archiveArtifacts artifacts: "njsscan-output.sarif", fingerprint: true
