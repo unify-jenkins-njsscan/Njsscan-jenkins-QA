@@ -85,7 +85,7 @@ pipeline {
     }
   }
   triggers {
-        cron '10 15 * * 1-5' // Runs at 15:10 on every day-of-week from Monday through Friday
+        cron '30 15 * * 1-5' // Runs at 15:10 on every day-of-week from Monday through Friday
   }
   post {
     always {
